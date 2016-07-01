@@ -1,0 +1,15 @@
+<div ng-controller = "SignController">
+	
+<h1 style="text-align: center">SignUp</h1>
+<p class="headings">Name</p>
+	<input type="text" ng-model="input1">
+	<p class="headings">E-mail</p>
+	<input type="text" ng-model="input3">
+	<p ng-model="error3" class="errorMsg">{{error3}}</p>
+	<p class="headings">Password</p>
+	<input type="text" ng-model="input4" style="-webkit-text-security: square;">
+	<p ng-model="error4" class="errorMsg">{{error4}}</p>
+	<p><button ng-click="checkInputs()">SignUp</button>
+	</p>
+
+</div>

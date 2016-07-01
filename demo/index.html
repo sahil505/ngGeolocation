@@ -1,11 +1,30 @@
 <html>
 <head>
   <title>ngGeolocation</title>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.js"></script>
-  <script src="./ngGeolocation.js"></script>
-  <script src="./app.js"></script>
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.js"></script>
+-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="./style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/2.0.0/angularfire.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDCu5snGkdffG5Cf05JdYJB1w7AhgMGirk",
+    authDomain: "sales-rep-tracker.firebaseapp.com",
+    databaseURL: "https://sales-rep-tracker.firebaseio.com",
+    storageBucket: "sales-rep-tracker.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>  
+<script src="./ngGeolocation.js"></script>
+<script src="./app.js"></script>
 </head>
-<body ng-app="geolocationDemo">
+<!-- <body ng-app="trackerApp">
   <div ng-controller="AppController">
     <h1>Basic (fetch once)</h1>
     Latitude: {{location.coords.latitude}}
@@ -19,6 +38,16 @@
     Longitude: {{$geolocation.position.coords.longitude}}
     <br />
     Timestamp: {{$geolocation.position.timestamp}}
+  </div>
+</body> -->
+
+<body ng-app="TrackerApp">
+  <div class="container">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="wrapper">
+        <div ng-view></div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

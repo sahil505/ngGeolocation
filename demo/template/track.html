@@ -1,0 +1,16 @@
+<div ng-controller="AppController">
+<!-- <input type="text" ng-model="location.text"/>
+<h1>You said: {{ location.text }}</h1> -->
+    <h1>Basic (fetch once)</h1>
+    Latitude:{{location.coords.latitude}}
+    <br />
+    Longitude: {{location.coords.longitude}}
+    <br />
+    Timestamp: {{location.timestamp}}
+    <h1>Advanced (fetch once)</h1>
+    Latitude: {{$geolocation.position.coords.latitude}}
+    <br />
+    Longitude: {{$geolocation.position.coords.longitude}}
+    <br />
+    Timestamp: {{$geolocation.position.timestamp}}
+</div>
